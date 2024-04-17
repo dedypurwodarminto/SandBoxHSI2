@@ -40,7 +40,7 @@ class TransaksiController extends Controller
 		$trans->tanggal = $tanggal;
 		$trans->diskon = $request->diskon;
 		$trans->total_bayar = $request->totalBayar;
-		$trans->id_kasir = $request->totalBayar;
+		$trans->id_kasir = $request->id_kasir;
         $trans->save();
 
         $list_barang = $request->input('barang');

@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index(){
         $pages = array(
-            'title' => 'Home Page'
+            'title' => 'Warung Kita'
         );
 
         // return view('index', $pages);

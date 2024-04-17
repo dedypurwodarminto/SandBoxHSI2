@@ -48,7 +48,7 @@
                                  @endphp
                                  <label for="no_transaksi">No Transaksi</label>
                                  <input type="text" class="form-control" name="no_transaksi" value="{{ $newTrans }}" readonly required>
-                                 <input type="hidden" name="id_kasir" value="{{  }}">
+                                 <input type="hidden" name="id_kasir" value="{{ Auth::user()->id }}">
                               </div>
                            </div>
                         </div>

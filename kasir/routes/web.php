@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DiskonController;
 use App\Http\Controllers\JenisBarangController;
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use App\Models\JenisBarang;
@@ -69,4 +70,8 @@ Route::group(['middleware' => ['auth', 'roles:admin,kasir']], function () {
    Route::get('/transaksi/create', [TransaksiController::class, 'create']);
    Route::post('/transaksi/store', [TransaksiController::class, 'store']);
    Route::get('/transaksi/detail/{no_transaksi}', [TransaksiController::class, 'detail']);
+
+   //Generate Pdf
+   Route::get('/faktur/{no_transaksi}', [PDFController::class, 'faktur']);
+   Route::get('/invoice/{no_transaksi}', [PDFController::class, 'invoice']);
 });

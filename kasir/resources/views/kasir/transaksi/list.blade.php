@@ -49,16 +49,16 @@
                                         <td>Rp.{{ number_format($row->total_bayar) }}</td>
                                         <td>
                                             <div class="dropdown">
-                                                <a class="btn btn-sm btn-info" href="/transaksi/detail/{{ $row->no_transaksi }}">
+                                                <a class="btn btn-sm btn-outline-dark" href="/transaksi/detail/{{ $row->no_transaksi }}">
                                                     <i class="fa fa-list"></i>
                                                     Detail
                                                 </a>
-                                                <button class="btn btn-sm btn-danger dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown">
+                                                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown">
                                                     <i class="fa fa-print"></i> Cetak </i>
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">Faktur</a>
-                                                    <a class="dropdown-item" href="#">Invoice</a>
+                                                    <a class="dropdown-item" href="/faktur/{{ $row->no_transaksi }}"  target="_blank">Faktur</a>
+                                                    <a class="dropdown-item" href="/invoice/{{ $row->no_transaksi }}"  target="_blank">Invoice</a>
                                                 </div>
                                             </div>
                                         </div>
